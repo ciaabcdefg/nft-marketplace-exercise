@@ -17,6 +17,9 @@ contract NFTMarket is ReentrancyGuard {
         owner = payable(msg.sender);
     }
 
+    // Allow the contract to receive ETH
+    receive() external payable {}
+
     struct MarketItem {
         uint itemId;
         address nftContract;
